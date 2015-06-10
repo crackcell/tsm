@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="63271794-c8e0-4bb0-bc86-18fd94497901" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/crackcell/algo/tsm/Config.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/crackcell/tsm/Config.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/crackcell/algo/tsm/Main.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/crackcell/tsm/Main.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/crackcell/algo/tsm/dataset/Index.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/crackcell/tsm/dataset/Index.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/crackcell/algo/tsm/dataset/Interval.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/crackcell/tsm/dataset/Interval.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/crackcell/algo/tsm/dataset/Partitioner.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/crackcell/tsm/dataset/Partitioner.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/scala/com/crackcell/algo/tsm/dataset/IntervalTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/crackcell/tsm/dataset/IntervalTest.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/scala/com/crackcell/algo/tsm/dataset/PartitionedIndexTest.scala" afterPath="$PROJECT_DIR$/src/test/scala/com/crackcell/tsm/dataset/PartitionedIndexTest.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arima.iws" afterPath="$PROJECT_DIR$/arima.iws" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/crackcell/tsm/models/Model.scala" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/scala/com/crackcell/tsm/models/arima/Model.scala" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/crackcell/tsm/models/arima/ARIMA.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/crackcell/tsm/models/arima/ARIMA.scala" />
     </list>
     <ignored path="arima.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -95,20 +89,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ARIMA.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ARIMA.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/crackcell/tsm/models/arima/ARIMA.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.06164828">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Model.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/crackcell/tsm/models/arima/Model.scala">
+      <file leaf-file-name="Model.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/crackcell/tsm/models/Model.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.024659311">
               <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
               <folding />
             </state>
@@ -169,6 +163,7 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/crackcell/tsm/algorithms/arima/ARIMA.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/crackcell/tsm/models/arima/Model.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/crackcell/tsm/models/arima/ARIMA.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/crackcell/tsm/models/Model.scala" />
       </list>
     </option>
   </component>
@@ -313,6 +308,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="arima" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tsm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scala" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tsm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="arima" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -377,6 +406,11 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/arima.ipr" />
     <property name="FullScreen" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.crackcell.tsm.models" />
+    </key>
   </component>
   <component name="RunManager" selected="ScalaTest.PartitionedIndexTest">
     <configuration default="false" name="FrequencyTest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true">
@@ -936,18 +970,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/crackcell/tsm/models/arima/Model.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/crackcell/tsm/models/arima/ARIMA.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/crackcell/tsm/models/arima/ARIMA.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/crackcell/tsm/models/Model.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06164828">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.024659311">
+          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
           <folding />
         </state>
       </provider>
