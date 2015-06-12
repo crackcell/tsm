@@ -1,4 +1,4 @@
-package com.crackcell.tsm.dataset
+package com.crackcell.tsm.io
 
 import org.joda.time.DateTime
 import org.scalatest._
