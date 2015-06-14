@@ -22,12 +22,10 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="arima" />
         <module name="tsm" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="arima" target="1.5" />
       <module name="tsm" target="1.5" />
     </bytecodeTargetLevel>
   </component>
@@ -182,7 +180,7 @@
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="ScalaCompilerConfiguration">
-    <profile name="Maven 1" modules="arima,tsm" />
+    <profile name="Maven 1" modules="tsm,tsm" />
   </component>
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />

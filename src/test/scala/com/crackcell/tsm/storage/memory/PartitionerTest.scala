@@ -1,10 +1,10 @@
-package com.crackcell.tsm.io.storage.memory
+package com.crackcell.tsm.storage.memory
 
-import com.crackcell.tsm.storage.memory.{HourSlot, TimePartition}
+import com.crackcell.tsm.storage.memory._
 import org.joda.time._
 import org.scalatest._
 
-class PartitionTest extends FlatSpec {
+class PartitionerTest extends FlatSpec {
 
   "Partition" should "work" in {
     val dt:Array[DateTime] = Array[DateTime](
@@ -13,7 +13,7 @@ class PartitionTest extends FlatSpec {
       DateTime.parse("2010-06-30T03:00+02:00"),
       DateTime.parse("2010-06-30T04:00+02:00")
     )
-    val tp = new TimePartition(new HourSlot(1), dt(0))
+    val tp = TimePartitioner(TimePartitioner.HOUR, 1, dt(0))
     println(tp.getPartitionID(dt(2)))
   }
 
