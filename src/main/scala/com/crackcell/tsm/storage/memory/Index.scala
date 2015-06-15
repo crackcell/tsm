@@ -1,14 +1,17 @@
 package com.crackcell.tsm.storage.memory
 
-trait Index[S] {
-  def iterator: Iterator[S]
+import org.joda.time.DateTime
+
+import scala.collection.SortedMap
+
+trait Index[I, S] {
+  def iterator: Iterator[(I, S)]
 }
 
-class TimePartitionedIndex extends Index[TimeSlot] {
-  def iterator = new Iterator[TimeSlot] {
-    val self = this
-    def next: TimeSlot = null
-    def hasNext: Boolean = false
-  }
+class TimeIndex[S](val partitioner: TimePartitioner) extends Index[Int, S] {
+  var start: DateTime = null
+  var sortedData: SortedMap[Int, S] = null
+
+  def iterator = sortedData.iterator
 }
 

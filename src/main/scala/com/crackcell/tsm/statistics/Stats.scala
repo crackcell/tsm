@@ -1,4 +1,4 @@
-package com.crackcell.tsm.stats
+package com.crackcell.tsm.statistics
 
 trait Stats {
   def mean(): Double
