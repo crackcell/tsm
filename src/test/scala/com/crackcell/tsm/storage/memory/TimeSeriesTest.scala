@@ -19,6 +19,8 @@ class TimeSeriesTest extends FlatSpec {
       .setType(TimeSeries.HourIntervalTimeSeries, 1)
       .setData(dt, fea)
       .build()
-    println(ts.mean())
+    printf("mean = %f\n", ts.mean())
+    printf("var.s = %f\n", ts.vars())
+    printf("var.p = %f\n", ts.varp())
   }
 }

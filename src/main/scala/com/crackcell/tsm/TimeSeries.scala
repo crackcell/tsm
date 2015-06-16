@@ -15,16 +15,34 @@ object TimeSeries extends Enumeration {
 
 class TimeSeries(val index: Index[Int, Double]) extends Stats {
 
-  override def mean(): Double = {
-    index.iterator.foreach(() => {
-      println(args(0))
-    })
-    return 0
+  var m: Double = -1
+  var vp: Double = -1
+  var vs: Double = -1
+
+  loadStats()
+
+  def loadStats(): Unit = {
+    var sum1: Double = 0
+    var sum2: Double = 0
+    index.iterator.foreach{case (_, v) => {
+      sum1 += v
+      sum2 += v * v
+    }}
+
+    m = sum1 / index.size
+    vp = sum2 / index.size - m * m
+
+    sum1 = 0
+    index.iterator.foreach{case (_, v) => {
+      val diff = v - m
+      sum1 += diff * diff
+    }}
+    vs = sum1 / (index.size - 1)
   }
 
-  override def variance(): Double = {
-    return 0
-  }
+  override def mean(): Double = m
+  override def varp(): Double = vp
+  override def vars(): Double = vs
 
 }
 
