@@ -1,5 +1,6 @@
 package com.crackcell.tsm
 
+import scala.math._
 import org.joda.time.DateTime
 
 import com.crackcell.tsm.storage.memory._
@@ -15,13 +16,13 @@ object TimeSeries extends Enumeration {
 
 class TimeSeries(val index: Index[Int, Double]) extends Stats {
 
-  var m: Double = -1
-  var vp: Double = -1
-  var vs: Double = -1
+  private var m: Double = _
+  private var vp: Double = _
+  private var vs: Double = _
 
-  loadStats()
+  calcStats()
 
-  def loadStats(): Unit = {
+  private def calcStats(): Unit = {
     var sum1: Double = 0
     var sum2: Double = 0
     index.iterator.foreach{case (_, v) => {
@@ -40,8 +41,19 @@ class TimeSeries(val index: Index[Int, Double]) extends Stats {
     vs = sum1 / (index.size - 1)
   }
 
+  /**
+   * {@inheritdoc}
+   */
   override def mean(): Double = m
+
+  /**
+   * {@inheritdoc}
+   */
   override def varp(): Double = vp
+
+  /**
+   * {@inheritdoc}
+   */
   override def vars(): Double = vs
 
 }

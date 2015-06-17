@@ -22,5 +22,6 @@ class TimeSeriesTest extends FlatSpec {
     printf("mean = %f\n", ts.mean())
     printf("var.s = %f\n", ts.vars())
     printf("var.p = %f\n", ts.varp())
+    printf("sd = %f\n", ts.sd())
   }
 }
